@@ -64,6 +64,28 @@ waise hi EC2 instance ke liye EBS volume hota hai.
   - Volume aur EC2 instance **same Availability Zone** me hain
   - Aapne sahi instance select ki hai
 ---
+## ✏️ Modify EBS Volume Size
+
+Agar aapko existing EBS volume ka size badhana ya change karna hai, to neeche diye gaye steps follow karein:
+
+1. AWS Console me **EC2 → Volumes** par jaayein
+2. Jis **EBS volume** ka size modify karna hai, use select karein
+3. **Actions → Modify volume** par click karein
+4. Apni requirement ke according:
+   - Volume size increase karein (example: 8 GiB → 20 GiB)
+   - Ya volume type change karein (gp2 → gp3)
+5. **Modify** par click karein
+6. Confirmation ke liye **Yes** par click karein
+
+---
+
+### 📌 Important Notes
+- EBS volume ka **size sirf increase** kiya ja sakta hai, decrease nahi
+- Volume modify hone ke baad:
+  - Linux me partition aur file system resize karna padta hai
+- Running EC2 instance ke saath bhi volume modify ho sakta hai
+---
+
 ## 👨‍💻 Author
 
   Kumlesh Kurre
