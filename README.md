@@ -87,6 +87,56 @@ Agar aapko existing EBS volume ka size badhana ya change karna hai, to neeche di
 - Running EC2 instance ke saath bhi volume modify ho sakta hai
 ---
 
+## 🗑️ Detach and Delete an EBS Volume
+
+This section explains how to safely detach and permanently delete an EBS volume from an EC2 instance.
+
+## Step 1️⃣: Stop the EC2 Instance (Recommended)
+- Go to EC2 → Instances
+- Select the target instance
+- Click Instance state → Stop instance
+- Wait until the instance state changes to Stopped
+- Stopping the instance helps avoid data corruption during volume detachment.
+---
+
+## Step 2️⃣: Detach the EBS Volume
+- Navigate to EC2 → Volumes
+- Select the EBS volume you want to remove
+- Click Actions → Detach volume
+- Confirm by clicking Detach
+- Ensure the volume state becomes Available
+---
+
+## Step 3️⃣: Delete the EBS Volume
+- Select the detached EBS volume
+- Click Actions → Delete volume
+- Type delete in the confirmation box
+- Click Delete
+
+⚠️ Warning:
+Deleted EBS volumes cannot be recovered. Make sure you have a snapshot if backup is required.
+
+---
+
+## ▶️ Start EC2 Instance and Attach Volume (If Required)
+- Use the following steps to restart the EC2 instance and optionally attach a new or existing EBS volume.
+
+## Step 1️⃣: Attach an EBS Volume (Optional)
+- Go to EC2 → Volumes
+- Select the volume to attach
+- Click Actions → Attach volume
+- Choose the target EC2 instance
+- Specify the device name (e.g. /dev/xvdf)
+- Click Attach
+---
+
+## Step 2️⃣: Start the EC2 Instance
+- Go to EC2 → Instances
+- Select the instance
+- Click Instance state → Start instance
+- Wait until the instance reaches Running state
+---
+
 ## 👨‍💻 Author
 
   Kumlesh Kurre
