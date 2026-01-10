@@ -55,7 +55,8 @@ waise hi EC2 instance ke liye EBS volume hota hai.
    - Additional EBS volume: `/dev/xvdf` ya `/dev/sdc`
 5. Agar volume ke saamne **Attached** status dikh raha hai,  
    to iska matlab EBS volume successfully attach ho chuka hai.
-
+6. open linux terminal and type this command
+   ```lsblk``` showing disk.
 ---
 
 ### 📌 Note
