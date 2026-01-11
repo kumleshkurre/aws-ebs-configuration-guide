@@ -69,7 +69,7 @@ lsblk
 ## Important Notes
 - Volume size can only be increased, not decreased
 - File system resizing is required at the OS level after modification
-- Volumes can be modified while the EC2 instance is running
+- Volumes can be modified while the EC2 instance is running.
 ---
 
 ## 🗑️ Detach and Delete an EBS Volume
